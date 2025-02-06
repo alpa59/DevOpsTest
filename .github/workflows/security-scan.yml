@@ -17,4 +17,11 @@ jobs:
         sudo mv trivy /usr/local/bin/
 
     - name: Scan Docker image for vulnerabilities
-      run: trivy fs .
+      run: |
+        trivy fs . > trivy_report.txt
+        if grep -q "CRITICAL\|HIGH" trivy_report.txt; then
+          echo "Vulnerabilities found! Failing the workflow."
+          exit 1
+        else
+          echo "No critical or high vulnerabilities found."
+        fi
