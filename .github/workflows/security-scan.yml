@@ -19,8 +19,11 @@ jobs:
     - name: Scan Docker image for vulnerabilities
       run: |
         trivy fs . > trivy_report.txt
+        cat trivy_report.txt
         if grep -q "CRITICAL\|HIGH" trivy_report.txt; then
           echo "Vulnerabilities found! Failing the workflow."
+          echo "Summary of vulnerabilities:"
+          grep -E "CRITICAL|HIGH" trivy_report.txt
           exit 1
         else
           echo "No critical or high vulnerabilities found."
