@@ -17,3 +17,6 @@ jobs:
         
       - name: Run tests
         run: bash test_script.sh
+
+      - name: Run unit tests
+        run: pytest pytest.py
