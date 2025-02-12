@@ -22,10 +22,9 @@ jobs:
         run: npm install
         working-directory: ci-demo-main
 
-      - name: Run linter
-        run: npm run lint
-        working-directory: ci-demo-main
-
       - name: Run tests
         run: npm test
         working-directory: ci-demo-main
+
+      - name: Run linter
+        run: npm run lint
