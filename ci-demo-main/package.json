@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "lint": "eslint ."
   },
   "jest": {
     "testEnvironment": "node",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
-    "supertest": "^6.3.4"
+    "supertest": "^6.3.4",
+    "eslint": "^7.32.0"
   }
 }
