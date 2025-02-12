@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -16,3 +17,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+
+      - name: Change to the correct directory
+        run: cd ci-demo-main
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ci-demo-main
+
+      - name: Run tests
+        run: npm test
+        working-directory: ci-demo-main
