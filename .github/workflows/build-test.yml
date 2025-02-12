@@ -18,6 +18,10 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Create dummy package.json
+        run: |
+          echo '{}' > package.json
+
       - name: Install dependencies
         run: npm install
 
