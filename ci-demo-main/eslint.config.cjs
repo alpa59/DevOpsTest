@@ -1,7 +1,7 @@
-const globals = require("globals");
+const globals = require('globals');
 
 /** @type {import('eslint').Linter.Config[]} */
 module.exports = [
-  { files: ["**/*.js"], languageOptions: { sourceType: "script" } },
+  { files: ['**/*.js'], languageOptions: { sourceType: 'script' } },
   { languageOptions: { globals: globals.browser } },
 ];
