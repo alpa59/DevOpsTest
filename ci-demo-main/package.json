@@ -9,7 +9,6 @@
     "dev": "nodemon ./bin/www",
     "lint": "eslint . --fix",
     "format": "prettier --write .",
-    "prepare": "husky install"
   },
   "jest": {
     "testEnvironment": "node",
