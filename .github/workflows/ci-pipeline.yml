@@ -28,3 +28,9 @@ jobs:
 
       - name: Run unit tests
         run: pytest test.py
+
+      - name: Lint Code with ESLint
+        run: npx eslint .
+        
+      - name: Format Code with Prettier
+        run: npx prettier --check .
