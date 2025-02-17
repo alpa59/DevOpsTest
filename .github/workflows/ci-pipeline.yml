@@ -21,9 +21,11 @@ jobs:
 
       - name: Install Node.js dependencies
         run: npm install
+        working-directory: ci-demo-main
 
       - name: Run ESLint
         run: npx eslint .
+        working-directory: ci-demo-main
       
       - name: Run a basic test
         run: echo "CI Pipeline Running!"
