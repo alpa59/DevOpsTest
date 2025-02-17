@@ -14,7 +14,7 @@ class TestMathOperations(unittest.TestCase):
         self.assertEqual(add(0, 0), 0)
 
     def test_calc_add(self):
-        self.assertEqual(calc.Calculator.add(2, 1), 3)
+        self.assertEqual(calc.Calculator.add(self, 2, 1), 3)
 
     def test_calc_integration(self):
-        self.assertEqual((calc.Calculator.add(2, 1)+calc.Calculator.subtract(5, 2)), 6)
+        self.assertEqual((calc.Calculator.add(self, 2, 1)+calc.Calculator.subtract(self, 5, 2)), 6)
