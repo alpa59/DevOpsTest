@@ -2,10 +2,13 @@
   "name": "ci-demo",
   "version": "1.0.0",
   "description": "Demo project for demonstrating a CI pipeline",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "jest": {
     "testEnvironment": "node",
@@ -29,7 +32,7 @@
     "prettier": "^3.5.1",
     "supertest": "^6.3.4"
   },
-  "prettierConf": {
+  "prettier": {
     "semi": true,
     "singleQuote": true,
     "printWidth": 80
