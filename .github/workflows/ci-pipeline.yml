@@ -19,6 +19,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint .
+      
       - name: Run a basic test
         run: echo "CI Pipeline Running!"
         
