@@ -25,5 +25,10 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
     "supertest": "^6.3.4"
+  },
+  "prettierConf": {
+ "semi": true,
+ "singleQuote": true,
+ "printWidth": 80
   }
 }
