@@ -8,7 +8,7 @@
     "test": "jest",
     "dev": "nodemon ./bin/www",
     "lint": "eslint . --fix",
-    "format": "prettier --write .",
+    "format": "prettier --write ."
   },
   "jest": {
     "testEnvironment": "node",
